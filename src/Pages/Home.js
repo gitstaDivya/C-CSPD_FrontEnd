@@ -100,7 +100,7 @@ const Home = () => {
         {/* <!-- ================================ Announcements =============================== --> */}
 
         <div id="announcements">
-          <div className="skill-main">
+          <div className="announcements-main">
             <div className="container">
               <div className="row">
                 <div className="col-md-12">
@@ -116,7 +116,7 @@ const Home = () => {
               </div>
               <div className="row love-row wow fadeIn">
                 <div className="col-md-6">
-                  <div className="skill-details text-left">
+                  <div className="announcements-details text-left">
                     <p>
 
                     </p>
@@ -130,8 +130,8 @@ const Home = () => {
         {/* <!-- ================================ Resources =============================== --> */}
 
         <div id="resources">
-          <div className="resume-content">
-            <div className="resume-grid text-center">
+          <div className="resources-content">
+            <div className="resources-grid text-center">
               <div className="container">
                 <div className="row">
                   <div className="col-md-12">
@@ -147,11 +147,11 @@ const Home = () => {
                 </div>
                 <div className="row love-row wow fadeIn">
                   <div className="col-md-4 col-sm-4">
-                    <div className="resume-details" data-wow-delay=".2s">
-                      <div className="resume-hover"></div>
-                      <div className="resume-main">
+                    <div className="resources-details" data-wow-delay=".2s">
+                      <div className="resources-hover"></div>
+                      <div className="resources-main">
                         <i
-                          className="fa fa-home resume-icon"
+                          className="fa fa-home resources-icon"
                           aria-hidden="true"
                         ></i>
                         <h3>Communication Skills</h3>
@@ -166,11 +166,11 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="col-md-4 col-sm-4">
-                    <div className="resume-details" data-wow-delay=".3s">
-                      <div className="resume-hover"></div>
-                      <div className="resume-main">
+                    <div className="resources-details" data-wow-delay=".3s">
+                      <div className="resources-hover"></div>
+                      <div className="resources-main">
                         <i
-                          className="fa fa-graduation-cap resume-icon"
+                          className="fa fa-graduation-cap resources-icon"
                           aria-hidden="true"
                         ></i>
                         <h3>Soft-Skills</h3>
@@ -185,20 +185,20 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="col-md-4 col-sm-4">
-                    <div className="resume-details" data-wow-delay=".4s">
-                      <div className="resume-hover"></div>
-                      <div className="resume-main">
+                    <div className="resources-details" data-wow-delay=".4s">
+                      <div className="resources-hover"></div>
+                      <div className="resources-main">
                         <i
-                          className="fa fa-graduation-cap resume-icon"
+                          className="fa fa-graduation-cap resources-icon"
                           aria-hidden="true"
                         ></i>
                         <h3>Personality Development</h3>
-                        <h2>Posititve Personality traits</h2>
+                        <h2>Positive Personality traits</h2>
                         <div className="underline1"></div>
                         <div className="underline2"></div>
                         <p>
-                          You will learn about: Extraversion , agreeableness, openness,
-                          conscientiousness, and neuroticism (aka 'The Big 5')
+                          You will learn about: Extroversion , Agreeableness, Openness,
+                          Conscientiousness, and Neuroticism (aka 'The Big 5')
                         </p>
                       </div>
                     </div>
@@ -318,13 +318,6 @@ const Home = () => {
             </div>
           </div>
         </div>
-
-        {/* <!-- ================================ LOGIN ========================== --> */}
-
-          <div>
-
-          </div>
-
       </div>
     </React.StrictMode>
   );

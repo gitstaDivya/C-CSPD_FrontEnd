@@ -4,7 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57379db4-6fd5-4158-8920-5d2dc0181ac1" name="Changes" comment="" />
+    <list default="true" id="57379db4-6fd5-4158-8920-5d2dc0181ac1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/css/blog.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/css/blogpost.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/css/style1.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/assets/css/style1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.a1c593a0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.a1c593a0.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.a1c593a0.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/blog.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/blogpost.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/style1.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/googleSignIn/logIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/googleSignIn/logIn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/googleSignIn/signIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/googleSignIn/signIn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/y/index.html" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,15 +57,27 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;app.teamhub.trackedBranches&quot;: &quot;-6nb3uu/master&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/goutt/Desktop/C-CSPD&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.rcb.reactComponents" value="false" />
+        <entry key="com.haulmont.rcb.reactInspector" value="false" />
+      </map>
+    </option>
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\goutt\Desktop\C-CSPD\src\component" />
@@ -101,11 +136,36 @@
       <workItem from="1676224234637" duration="12649000" />
       <workItem from="1676238686480" duration="445000" />
       <workItem from="1676372569054" duration="12000" />
-      <workItem from="1676372677217" duration="520000" />
+      <workItem from="1676372677217" duration="2299000" />
+      <workItem from="1679383181690" duration="14000" />
+      <workItem from="1679401441543" duration="447000" />
+      <workItem from="1679401944238" duration="1956000" />
+      <workItem from="1679461549121" duration="9000" />
+      <workItem from="1679514398827" duration="1053000" />
+      <workItem from="1679860836522" duration="225000" />
+      <workItem from="1680105969467" duration="775000" />
+      <workItem from="1680168611213" duration="1589000" />
+      <workItem from="1680171361762" duration="109000" />
+      <workItem from="1680171474633" duration="51000" />
+      <workItem from="1680171554057" duration="139000" />
+      <workItem from="1680171706396" duration="4488000" />
+      <workItem from="1680176715079" duration="3643000" />
+      <workItem from="1680190170887" duration="1295000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

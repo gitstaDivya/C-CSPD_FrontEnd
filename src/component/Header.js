@@ -54,7 +54,7 @@ function Header() {
                         <a href="/#contact">Contact</a>
                       </li>
                       <li className="logincss">
-                        <SignIn/>
+                        <SignIn />
                       </li>
                     </ul>
                   </div>

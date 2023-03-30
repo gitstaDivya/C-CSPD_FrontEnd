@@ -6,7 +6,7 @@ function LogIn(){
         window.location.reload()
     }
     return (
-        <div id="logDiv">
+        <div id="logDiv" className=" text-center wow fadeIn container row col-md-12">
             <button className="Loginbutton" onClick={logout}>Logout</button>
         </div>
     );

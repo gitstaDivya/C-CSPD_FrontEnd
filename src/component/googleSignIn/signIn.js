@@ -16,7 +16,7 @@ function SignIn() {
         setValue(localStorage.getItem('email'))
     })
     return (
-        <div>
+        <div className=" text-center wow fadeIn container row col-md-12">
             {value ? <LogIn/> :
                 <button className="Loginbutton" onClick={handleClick}>Login</button>
             }
