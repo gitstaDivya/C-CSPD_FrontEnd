@@ -81,13 +81,13 @@ const Home = () => {
                         <div className="underline2 no-margin"></div>
                       </div>
                       <p className="wow fadeIn">
-                          As a scholar in English language, pragmatics and communication,
-                          I’m interested in devising linguistic and socio-pragmatic methodologies that can inform
-                          language teaching and communication in higher education contexts.
-                          Multilingualism and hybridity in internet communication intrigues me.
-                          I love to observe and explore how individuals exploit language as a semiotic system
-                          to express themselves, and to create, communicate and interpret meaning in diverse contexts,
-                          both online and offline.
+                        As a scholar in English language, pragmatics and communication,
+                        I’m interested in devising linguistic and socio-pragmatic methodologies that can inform
+                        language teaching and communication in higher education contexts.
+                        Multilingualism and hybridity in internet communication intrigues me.
+                        I love to observe and explore how individuals exploit language as a semiotic system
+                        to express themselves, and to create, communicate and interpret meaning in diverse contexts,
+                        both online and offline.
                       </p>
                     </div>
                   </div>
@@ -109,7 +109,41 @@ const Home = () => {
                     <div className="underline1"></div>
                     <div className="underline2"></div>
                     <p>
-
+                      <marquee direction="down" style={{ height: "400px", display: "grid", placeItems: "center", overflow: "hidden", width: "100%", textAlign:"center"}}>
+                        <div className="alert alert-success">
+                          Announcenent # ................................................................
+                        </div>
+                        <div className="alert alert-success" role="alert">
+                          Announcenent # ................................................................
+                        </div>
+                        <div className="alert alert-success" role="alert">
+                          Announcenent # ................................................................
+                        </div>
+                        <div className="alert alert-success" role="alert">
+                          Announcenent # ................................................................
+                        </div>
+                        <div className="alert alert-success" role="alert">
+                          Announcenent # ................................................................
+                        </div>
+                        <div className="alert alert-success" role="alert">
+                          Announcenent # ................................................................
+                        </div>
+                        <div className="alert alert-success" role="alert">
+                          Announcenent # ................................................................
+                        </div>
+                        <div className="alert alert-success" role="alert">
+                          Announcenent # ................................................................
+                        </div>
+                        <div className="alert alert-success" role="alert">
+                          Announcenent # ................................................................
+                        </div>
+                        <div className="alert alert-success" role="alert">
+                          Announcenent # ................................................................
+                        </div>
+                        <div className="alert alert-success" role="alert">
+                          Announcenent # ................................................................
+                        </div>
+                      </marquee>
                     </p>
                   </div>
                 </div>
@@ -140,7 +174,7 @@ const Home = () => {
                       <div className="underline1"></div>
                       <div className="underline2"></div>
                       <p>
-                          Pick one of the roadmaps to get started.
+                        Pick one of the roadmaps to get started.
                       </p>
                     </div>
                   </div>
@@ -159,8 +193,8 @@ const Home = () => {
                         <div className="underline1"></div>
                         <div className="underline2"></div>
                         <p>
-                           You will learn about: Presentation, Active listening, Nonverbal communication,
-                           Giving/taking feedback.
+                          You will learn about: Presentation, Active listening, Nonverbal communication,
+                          Giving/taking feedback.
                         </p>
                       </div>
                     </div>
