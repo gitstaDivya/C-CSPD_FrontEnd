@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+.QuizMainContent {
+  display: table;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 80px;
+  background-color: #fff;
+  padding: 30px;
+}
+
+#logoutbutt{
+  margin-right: 15px;
+}

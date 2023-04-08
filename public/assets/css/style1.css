@@ -59,28 +59,6 @@ body {
   height: 100%;
 }
 
-.Loginbutton{
-
-  border-radius: 20mm;
-  background-color: #efd236;
-  border: 1px solid white;
-  color: #00565d;
-  padding: 5px 22px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-
-  /*color: white;*/
-  /*padding: 0;*/
-  /*border: none;*/
-  /*background: none;*/
-  /*margin-top: 11px;*/
-  /*margin-left: 30px;*/
-
-}
 
 .menubar {
   height: auto;
@@ -187,6 +165,35 @@ body {
   border-radius: 4px;
 }
 
+.Allbutton{
+
+  border-radius: 20mm;
+  background-color: #efd236;
+  border: 1px solid white;
+  color: #00565d;
+  padding: 5px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+  /*color: white;*/
+  /*padding: 0;*/
+  /*border: none;*/
+  /*background: none;*/
+  /*margin-top: 11px;*/
+  /*margin-left: 30px;*/
+
+}
+
+/*@media (max-width:300px){*/
+/*  .Loginbutton {*/
+/*    float: right;*/
+/*    margin-right: 100px;*/
+/*  }*/
+/*}*/
 /*====================================================== HOME BACKGROUND =====================================================*/
 
 #home {

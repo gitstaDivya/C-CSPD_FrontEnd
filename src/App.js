@@ -13,6 +13,7 @@ import ScrollToTop from "./component/ScrollToTop";
 
 // import Pages
 import Home from "./Pages/Home";
+import QApp from "./QApp";
 
 function App() {
   return (

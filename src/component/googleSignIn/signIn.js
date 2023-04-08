@@ -16,9 +16,9 @@ function SignIn() {
         setValue(localStorage.getItem('email'))
     })
     return (
-        <div className=" text-center wow fadeIn container row col-md-12">
+        <div className="text-center wow fadeIn container row col-md-12 col-sm-12 ">
             {value ? <LogIn/> :
-                <button className="Loginbutton" onClick={handleClick}>Login</button>
+                <button className="Allbutton" onClick={handleClick}>Login</button>
             }
         </div>
     )
