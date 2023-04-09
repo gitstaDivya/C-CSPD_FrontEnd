@@ -23,7 +23,7 @@ function App() {
         <ScrollToTop>
           <Switch>
             <Route exact path="/" component={Home} />
-            {/*<Route exact path="/" component={QApp} />*/}
+            <Route exact path="/quizApp" component={QApp} />
           </Switch>
         </ScrollToTop>
         <Footer />

@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
-import ReactDOM from "react-dom";
-import Header from "../Header";
-import Footer from "../Footer";
 import '../../App.css'
-import quizRenderer from "./quizRenderer";
-import QApp from "../../QApp";
+
+import { Link } from "react-router-dom";
 
 function LogIn() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -22,9 +19,6 @@ function LogIn() {
         window.location.reload();
     };
 
-    const handleQuizClick = () => {
-        quizRenderer();
-    };
     useEffect(() => {
         const email = localStorage.getItem("email");
         if (email) {
@@ -41,9 +35,11 @@ function LogIn() {
                         Logout
                     </button>
                     {showQuizButton && (
-                        <button className="Allbutton" onClick={handleQuizClick}>
+                        <Link to="/quizApp">
+                        <button className="Allbutton">
                             Quiz
                         </button>
+                        </Link>
                     )}
                 </div>
             )}
