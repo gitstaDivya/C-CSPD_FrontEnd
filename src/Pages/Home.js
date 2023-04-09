@@ -1,5 +1,32 @@
 import React from "react";
+import Footer from "../component/Footer";
+import './../Pages/Home.css'
+// import { Navigate, useNavigate } from "react-router";
+import { useHistory } from "react-router";
+
+const stopMarquee = () =>{
+  var marque = document.getElementById('marID');
+  if(marque != null)
+  {
+    marque.stop();
+  }
+}
+
+const startMarquee = () =>{
+  var marque = document.getElementById('marID');
+  if(marque != null)
+  {
+    marque.start();
+  }
+}
+
+const navigatetoPage = () =>{
+  const history = useHistory();
+  history.push('/resources')
+}
 const Home = () => {
+
+  // const navigate = useNavigate();
   return (
     <React.StrictMode>
       <div className="main-page-content">
@@ -108,8 +135,8 @@ const Home = () => {
                     <h3>Announcements</h3>
                     <div className="underline1"></div>
                     <div className="underline2"></div>
-                    <p>
-                      <marquee direction="down" style={{ height: "400px", display: "grid", placeItems: "center", overflow: "hidden", width: "100%", textAlign:"center"}}>
+                    <p onMouseOver={()=>stopMarquee()} onMouseOut={()=>startMarquee()}>
+                    <marquee id='marID' direction="up" style={{ height: "400px", display: "grid", placeItems: "center", overflow: "hidden", width: "100%", textAlign:"center"}}>
                         <div className="alert alert-success">
                           Announcenent # ................................................................
                         </div>
@@ -179,11 +206,11 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div className="row love-row wow fadeIn">
+                <div onClick={()=>navigatetoPage()} className="row love-row wow fadeIn">
                   <div className="col-md-4 col-sm-4">
                     <div className="resources-details" data-wow-delay=".2s">
                       <div className="resources-hover"></div>
-                      <div className="resources-main">
+                      <div  className="resources-main">
                         <i
                           className="fa fa-home resources-icon"
                           aria-hidden="true"
@@ -353,6 +380,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </React.StrictMode>
   );
 };
