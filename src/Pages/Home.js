@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../component/Footer";
 import './../Pages/Home.css'
 // import { Navigate, useNavigate } from "react-router";
-import { useHistory } from "react-router";
+import { useHistory } from "react-router-dom";
 
 const stopMarquee = () =>{
   var marque = document.getElementById('marID');
@@ -20,12 +20,10 @@ const startMarquee = () =>{
   }
 }
 
-const navigatetoPage = () =>{
-  const history = useHistory();
-  history.push('/resources')
-}
-const Home = () => {
 
+const Home = () => {
+  
+  const history = useHistory();
   // const navigate = useNavigate();
   return (
     <React.StrictMode>
@@ -138,37 +136,37 @@ const Home = () => {
                     <p onMouseOver={()=>stopMarquee()} onMouseOut={()=>startMarquee()}>
                     <marquee id='marID' direction="up" style={{ height: "400px", display: "grid", placeItems: "center", overflow: "hidden", width: "100%", textAlign:"center"}}>
                         <div className="alert alert-success">
-                          Announcenent # ................................................................
+                          Announcement # ................................................................
                         </div>
                         <div className="alert alert-success" role="alert">
-                          Announcenent # ................................................................
+                          Announcement # ................................................................
                         </div>
                         <div className="alert alert-success" role="alert">
-                          Announcenent # ................................................................
+                          Announcement # ................................................................
                         </div>
                         <div className="alert alert-success" role="alert">
-                          Announcenent # ................................................................
+                          Announcement # ................................................................
                         </div>
                         <div className="alert alert-success" role="alert">
-                          Announcenent # ................................................................
+                          Announcement # ................................................................
                         </div>
                         <div className="alert alert-success" role="alert">
-                          Announcenent # ................................................................
+                          Announcement # ................................................................
                         </div>
                         <div className="alert alert-success" role="alert">
-                          Announcenent # ................................................................
+                          Announcement # ................................................................
                         </div>
                         <div className="alert alert-success" role="alert">
-                          Announcenent # ................................................................
+                          Announcement # ................................................................
                         </div>
                         <div className="alert alert-success" role="alert">
-                          Announcenent # ................................................................
+                          Announcement # ................................................................
                         </div>
                         <div className="alert alert-success" role="alert">
-                          Announcenent # ................................................................
+                          Announcement # ................................................................
                         </div>
                         <div className="alert alert-success" role="alert">
-                          Announcenent # ................................................................
+                          Announcement # ................................................................
                         </div>
                       </marquee>
                     </p>
@@ -206,8 +204,8 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div onClick={()=>navigatetoPage()} className="row love-row wow fadeIn">
-                  <div className="col-md-4 col-sm-4">
+                <div  className="row love-row wow fadeIn">
+                  <div onClick={()=>history.push('/communication')} className="col-md-4 col-sm-4">
                     <div className="resources-details" data-wow-delay=".2s">
                       <div className="resources-hover"></div>
                       <div  className="resources-main">
@@ -226,7 +224,7 @@ const Home = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-md-4 col-sm-4">
+                  <div onClick={()=>history.push('/softskills')} className="col-md-4 col-sm-4">
                     <div className="resources-details" data-wow-delay=".3s">
                       <div className="resources-hover"></div>
                       <div className="resources-main">
@@ -245,7 +243,7 @@ const Home = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-md-4 col-sm-4">
+                  <div onClick={()=>history.push('/resources')} className="col-md-4 col-sm-4">
                     <div className="resources-details" data-wow-delay=".4s">
                       <div className="resources-hover"></div>
                       <div className="resources-main">

@@ -14,7 +14,8 @@ import ScrollToTop from "./component/ScrollToTop";
 // import Pages
 import Home from "./Pages/Home";
 import Resources from "./Pages/Resources";
-
+import SoftSkills from "./Pages/softskills";
+import Communication from "./Pages/communication";
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/resources" component={Resources} />
+            <Route exact path="/softskills" component={SoftSkills} />
+            <Route exact path= "/communication" component={Communication} />
           </Switch>
         </ScrollToTop>
         
