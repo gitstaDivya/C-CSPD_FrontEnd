@@ -30,7 +30,7 @@ function App() {
             <Route exact path= "/communication" component={Communication} />
           </Switch>
         </ScrollToTop>
-        
+        <Footer />
       </Router>
     </React.StrictMode>
   );
