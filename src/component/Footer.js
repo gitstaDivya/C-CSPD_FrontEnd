@@ -10,19 +10,8 @@ function Footer() {
     <React.StrictMode>
       <div className="copyright-details">
         <div className="copyright">
-          <h3>&copy; {currYear}, Made with ❤️ by Divya Jain &amp; Aditya Gautam</h3>
+          <h3>&copy; {currYear}, Developed and maintained by: <a href="mailto:19ucs070@Lnmiit.ac.in"> Aditya Gautam</a>, <a href="mailto:19ucs216@lnmiit.ac.in"> Divya Jain</a>, <a href="mailto:20uec008@lnmiit.ac.in"> Aditya Singh</a> and <a href="mailto:20uec133@lnmiit.ac.in"> Sparsh Kumar</a></h3>
         </div>
-        <a
-          href="//www.dmca.com/Protection/Status.aspx?ID=4ce89e88-486f-4e19-9159-e412a842118e"
-          title="DMCA.com Protection Status"
-          class="dmca-badge"
-        >
-          <img
-            src="https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=4ce89e88-486f-4e19-9159-e412a842118e"
-            alt="DMCA.com Protection Status"
-          />
-        </a>
-        <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
       </div>
     </React.StrictMode>
   );
