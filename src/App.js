@@ -17,6 +17,7 @@ import Resources from "./Pages/Resources";
 import SoftSkills from "./Pages/softskills";
 import Communication from "./Pages/communication";
 import PastEvents from "./Pages/PastEvents";
+import discuss from "./Pages/discuss";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route exact path="/softskills" component={SoftSkills} />
             <Route exact path= "/communication" component={Communication} />
             <Route exact path= "/pastevents" component={PastEvents} />
+            <Route exact path="/discuss" component={discuss} />
           </Switch>
         </ScrollToTop>
         {/* <Footer /> */}
