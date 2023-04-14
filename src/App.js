@@ -30,6 +30,8 @@ function App() {
             <Route exact path="/resources" component={Resources} />
             <Route exact path="/softskills" component={SoftSkills} />
             <Route exact path= "/communication" component={Communication} />
+            <Route exact path= "/pastevents" component={PastEvents} />
+            <Route exact path="/discuss" component={discuss} />
           </Switch>
         </ScrollToTop>
         {/* <Footer /> */}
