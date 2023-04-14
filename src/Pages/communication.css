@@ -113,10 +113,10 @@ a{
     /* margin-right: 50px; */
   }
 
-  li:hover{
+  /* li:hover{
     cursor: pointer;
     background-color: #f1b316;
-  }
+  } */
   
   .question-text {
     color: white;

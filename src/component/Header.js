@@ -7,12 +7,12 @@ function Header() {
     <React.StrictMode>
       <div className="menubar">
         <div className="menubar-content">
-          <nav className="navbar navbar-default navbar-fixed-top">
+          <nav className="navbar navbar-default navbar-fixed-top" id="headerFile">
             <div className="container">
               <div className="row">
                 <div className="col-md-3 col-sm-3">
                   <div className="site-title">
-                    <a href="/#home" style={{ textDecoration: "none" }}>
+                    <a href="/" style={{ textDecoration: "none" }}>
                       <h3>C-CSPD</h3>
                     </a>
                   </div>
@@ -38,7 +38,7 @@ function Header() {
                   >
                     <ul className="nav navbar-nav">
                       <li>
-                        <a href="/#home" className="active">
+                        <a href="/" className="active">
                           Home
                         </a>
                       </li>

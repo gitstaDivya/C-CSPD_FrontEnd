@@ -24,6 +24,8 @@ const startMarquee = () =>{
 const Home = () => {
   
   const history = useHistory();
+  console.log(document.getElementById('headerFile'))
+  
   // const navigate = useNavigate();
   return (
     <React.StrictMode>

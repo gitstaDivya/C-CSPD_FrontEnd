@@ -14,48 +14,48 @@ function SoftSkills() {
     
     const questions = [
         {
-          text: "What is the capital of America?",
-          options: [
-            { id: 0, text: "New York City", isCorrect: false },
-            { id: 1, text: "Boston", isCorrect: false },
-            { id: 2, text: "Santa Fe", isCorrect: false },
-            { id: 3, text: "Washington DC", isCorrect: true },
+            text: "Which of the following is an example of a soft skill? ",
+            options: [
+              { id: 0, text: "Data analysis", isCorrect: false },
+              { id: 1, text: "Project management", isCorrect: false },
+              { id: 2, text: "Data analysis", isCorrect: false },
+              { id: 3, text: "Communication", isCorrect: true },
           ],
         },
         {
-          text: "What year was the Constitution of America written?",
+          text: "Which of the following is an example of effective communication?",
           options: [
-            { id: 0, text: "1787", isCorrect: true },
-            { id: 1, text: "1776", isCorrect: false },
-            { id: 2, text: "1774", isCorrect: false },
-            { id: 3, text: "1826", isCorrect: false },
+            { id: 0, text: "Asking clarifying questions", isCorrect: true },
+            { id: 1, text: "Using technical jargon", isCorrect: false },
+            { id: 2, text: "Speaking in a monotone voice", isCorrect: false },
+            { id: 3, text: "Interrupting the other person", isCorrect: false },
           ],
         },
         {
-          text: "Who was the second president of the US?",
+          text: "Which of the following is an example of teamwork?",
           options: [
-            { id: 0, text: "John Adams", isCorrect: true },
-            { id: 1, text: "Paul Revere", isCorrect: false },
-            { id: 2, text: "Thomas Jefferson", isCorrect: false },
-            { id: 3, text: "Benjamin Franklin", isCorrect: false },
+            { id: 0, text: "Collaborating with others to achieve a common goal", isCorrect: true },
+            { id: 1, text: "Working alone on a project", isCorrect: false },
+            { id: 2, text: "Criticizing other team members", isCorrect: false },
+            { id: 3, text: "Taking credit for the team's work", isCorrect: false },
           ],
         },
         {
-          text: "What is the largest state in the US?",
+          text: "Which of the following is an example of emotional intelligence?",
           options: [
-            { id: 0, text: "California", isCorrect: false },
-            { id: 1, text: "Alaska", isCorrect: true },
-            { id: 2, text: "Texas", isCorrect: false },
-            { id: 3, text: "Montana", isCorrect: false },
+            { id: 0, text: "Being stubborn and inflexible", isCorrect: false },
+            { id: 1, text: "Showing empathy towards others", isCorrect: true },
+            { id: 2, text: "Avoiding conflict at all costs", isCorrect: false },
+            { id: 3, text: "Refusing to listen to other people's opinions", isCorrect: false },
           ],
         },
         {
-          text: "Which of the following countries DO NOT border the US?",
+          text: "Which of the following is an example of time management?",
           options: [
-            { id: 0, text: "Canada", isCorrect: false },
-            { id: 1, text: "Russia", isCorrect: true },
-            { id: 2, text: "Cuba", isCorrect: true },
-            { id: 3, text: "Mexico", isCorrect: false },
+            { id: 0, text: "Procrastinating until the last minute", isCorrect: false },
+            { id: 1, text: "Making a to-do list and prioritizing tasks", isCorrect: true },
+            { id: 2, text: "Working on multiple tasks at the same time", isCorrect: false },
+            { id: 3, text: "Ignoring deadlines and due dates", isCorrect: false },
           ],
         },
       ];
@@ -100,6 +100,9 @@ function SoftSkills() {
                     </div>
                     <div className='subHeading'>
                         <a href='#presentationsoft' className='subHeadingText'>Presentation Skills</a>
+                    </div>
+                    <div className='subHeading'>
+                        <a href='#quiz' className='subHeadingText'>Exercise</a>
                     </div>
                 </div>
 
@@ -213,9 +216,9 @@ function SoftSkills() {
 
                         </p>
                         <br></br>
-                        <div className="quiz">
+                        <div className="quiz" id='quiz'>
                     {/* 1. Header  */}
-                    <h1>PERSONALITY DEVELOPMENT QUIZ</h1>
+                    <h1>SOFT SKILLS EXERCISE</h1>
 
                     {/* 2. Current Score  */}
                     <h2>Score: {score}</h2>

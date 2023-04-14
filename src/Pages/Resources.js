@@ -14,21 +14,21 @@ function Resources() {
 
   const questions = [
     {
-      text: "What is the capital of America?",
+      text: "Which of the following is an important trait for personality development?",
       options: [
-        { id: 0, text: "New York City", isCorrect: false },
-        { id: 1, text: "Boston", isCorrect: false },
-        { id: 2, text: "Santa Fe", isCorrect: false },
-        { id: 3, text: "Washington DC", isCorrect: true },
+        { id: 0, text: "Apathy", isCorrect: false },
+        { id: 1, text: "Arrogance", isCorrect: false },
+        { id: 2, text: "Introversion", isCorrect: false },
+        { id: 3, text: "Humility", isCorrect: true },
       ],
     },
     {
-      text: "What year was the Constitution of America written?",
+      text: "Which of the following is an example of positive self-talk?",
       options: [
-        { id: 0, text: "1787", isCorrect: true },
-        { id: 1, text: "1776", isCorrect: false },
-        { id: 2, text: "1774", isCorrect: false },
-        { id: 3, text: "1826", isCorrect: false },
+        { id: 0, text: "I'm going to give it my best shot", isCorrect: true },
+        { id: 1, text: "I'm not good enough for this", isCorrect: false },
+        { id: 2, text: "I can't do this, it's too hard", isCorrect: false },
+        { id: 3, text: "I'll never be successful", isCorrect: false },
       ],
     },
     {
@@ -41,21 +41,21 @@ function Resources() {
       ],
     },
     {
-      text: "What is the largest state in the US?",
+      text: "Which of the following is an example of a growth mindset?",
       options: [
-        { id: 0, text: "California", isCorrect: false },
-        { id: 1, text: "Alaska", isCorrect: true },
-        { id: 2, text: "Texas", isCorrect: false },
-        { id: 3, text: "Montana", isCorrect: false },
+        { id: 0, text: "Believing that intelligence is fixed and cannot be improved", isCorrect: false },
+        { id: 1, text: "Believing that failure is a reflection of personal worth", isCorrect: true },
+        { id: 2, text: "Believing that challenges are opportunities for growth and learning", isCorrect: false },
+        { id: 3, text: "Believing that success is based solely on luck", isCorrect: false },
       ],
     },
     {
-      text: "Which of the following countries DO NOT border the US?",
+      text: "Which of the following is an example of assertiveness?",
       options: [
-        { id: 0, text: "Canada", isCorrect: false },
-        { id: 1, text: "Russia", isCorrect: true },
-        { id: 2, text: "Cuba", isCorrect: true },
-        { id: 3, text: "Mexico", isCorrect: false },
+        { id: 0, text: "Allowing others to take advantage of you", isCorrect: false },
+        { id: 1, text: "Being overly aggressive and confrontational", isCorrect: true },
+        { id: 2, text: "Standing up for yourself in a respectful and confident manner", isCorrect: true },
+        { id: 3, text: "Avoiding conflict at all costs", isCorrect: false },
       ],
     },
   ];
@@ -106,6 +106,9 @@ function Resources() {
                     </div>
                     <div className='subHeading'>
                         <a href='#leadershippersonality' className='subHeadingText'>Leadership Skills</a>
+                    </div>
+                    <div className='subHeading'>
+                        <a href='#quiz' className='subHeadingText'>Exercise</a>
                     </div>
                 </div>
             </div>
@@ -177,9 +180,9 @@ Overall, leadership skills are a critical aspect of personality development. By 
 
                 </p>
                 <br></br>
-                <div className="quiz">
+                <div className="quiz" id='quiz'>
                     {/* 1. Header  */}
-                    <h1>PERSONALITY DEVELOPMENT QUIZ</h1>
+                    <h1>PERSONALITY DEVELOPMENT EXERCISE</h1>
 
                     {/* 2. Current Score  */}
                     <h2>Score: {score}</h2>
