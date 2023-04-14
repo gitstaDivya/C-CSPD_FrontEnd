@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { GameStateContext } from "../helpers/Contexts";
-import { Questions } from "../helpers/Questions";
+import { GameStateContext } from "../helperQuiz/Contexts";
+import { Questions } from "../helperQuiz/Questions";
 import "../QApp.css";
 
 const EndScreen = () => {

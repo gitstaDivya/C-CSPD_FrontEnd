@@ -5,14 +5,14 @@
  *
  * Usage:
  *     $(".fancybox").fancybox({
- *         helpers : {
+ *         helperQuiz : {
  *             media: true
  *         }
  *     });
  *
  * Set custom URL parameters:
  *     $(".fancybox").fancybox({
- *         helpers : {
+ *         helperQuiz : {
  *             media: {
  *                 youtube : {
  *                     params : {
@@ -25,7 +25,7 @@
  *
  * Or:
  *     $(".fancybox").fancybox({,
- *         helpers : {
+ *         helperQuiz : {
  *             media: true
  *         },
  *         youtube : {

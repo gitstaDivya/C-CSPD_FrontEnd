@@ -5,7 +5,7 @@
  *
  * Usage:
  *     $(".fancybox").fancybox({
- *         helpers : {
+ *         helperQuiz : {
  *             buttons: {
  *                 position : 'top'
  *             }

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "../QApp.css";
 import { useContext } from "react";
-import { GameStateContext } from "../helpers/Contexts";
-import { Questions } from "../helpers/Questions";
+import { GameStateContext } from "../helperQuiz/Contexts";
+import { Questions } from "../helperQuiz/Questions";
 
 const SolutionPage = ({ question, questionNumber }) => (
     <div className="SolutionPage">
@@ -26,7 +26,7 @@ const SolutionPage = ({ question, questionNumber }) => (
 
 const Solutions = () => {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-    const { setGameState } = useContext(GameStateContext);
+    const { setScore, setGameState } = useContext(GameStateContext);
     const totalQuestions = Questions.length;
 
     const goToNextQuestion = () => {
@@ -42,6 +42,7 @@ const Solutions = () => {
     };
 
     const restartQuiz = () => {
+        setScore(0);
         setGameState("menu");
     };
 

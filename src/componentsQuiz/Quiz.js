@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
-import { Questions } from "../helpers/Questions";
-import { GameStateContext } from "../helpers/Contexts";
+import { Questions } from "../helperQuiz/Questions";
+import { GameStateContext } from "../helperQuiz/Contexts";
 import "../QApp.css";
 
 function Quiz() {
@@ -36,20 +36,12 @@ function Quiz() {
 
     return (
         <div className="Quiz">
-            <div id="qHeadandScore">
+            <div className="qHeadandScore">
                 <h2>
                     {currentQuestion + 1} / {Questions.length}
                 </h2>
                 <h2 className="questionsAhead">{Questions[currentQuestion].prompt}</h2>
             </div>
-            {/*
-            ------ for showing current question number greater than total number of questions -----
-            <div className="qHeadandScore">
-                <h1 style={{display: "inline-block", marginRight: "7px"}}>{currentQuestion + 1}</h1>
-                <h3 style={{display: "inline-block"}}> / {Questions.length}</h3>
-                <h2 className="questionsAhead">{Questions[currentQuestion].prompt}</h2>
-            </div>
-            */}
             <div className="questions">
                 <button
                     className={`qbutton ${optionChosen === "optionA" ? "selected" : ""}`}
@@ -90,7 +82,7 @@ function Quiz() {
                     Finish Quiz
                 </button>
             ) : (
-                <button className="qbutton qnext qb200px" onClick={nextQuestion} id="nextQuestion">
+                <button className="qbutton qnext qb200px nextQuestion" onClick={nextQuestion}>
                     Next Question
                 </button>
             )}
@@ -98,10 +90,6 @@ function Quiz() {
             <button className="qbutton qrestart" onClick={restartQuiz}>
                 Restart Quiz
             </button>
-
-            <GameStateContext.Provider value={{ score, setScore }}>
-                {gameState === "finished" ? <EndScreen /> : null}
-            </GameStateContext.Provider>
         </div>
     );
 }

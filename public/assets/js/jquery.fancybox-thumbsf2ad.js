@@ -5,7 +5,7 @@
  *
  * Usage:
  *     $(".fancybox").fancybox({
- *         helpers : {
+ *         helperQuiz : {
  *             thumbs: {
  *                 width  : 50,
  *                 height : 50
