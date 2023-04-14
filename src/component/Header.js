@@ -1,8 +1,37 @@
 import React from "react";
 import SignIn from "./googleSignIn/signIn";
-import "./header.css"
+import { useEffect, useState } from "react";
+import { auth, provider } from "./googleSignIn/config";
+import { signInWithPopup } from "firebase/auth";
+import { Link } from "react-router-dom";
 
 function Header() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [showQuizButton, setShowQuizButton] = useState(false);
+
+  const handleLoginClick = () => {
+    signInWithPopup(auth, provider).then((data) => {
+      localStorage.setItem("email", data.user.email);
+      setIsLoggedIn(true);
+      setShowQuizButton(true);
+    });
+  };
+
+  const handleLogoutClick = () => {
+    setIsLoggedIn(false);
+    setShowQuizButton(false);
+    localStorage.clear();
+    window.location.reload();
+  };
+
+  useEffect(() => {
+    const email = localStorage.getItem("email");
+    if (email) {
+      setIsLoggedIn(true);
+      setShowQuizButton(true);
+    }
+  }, []);
+
   return (
     <React.StrictMode>
       <div className="menubar">
@@ -61,7 +90,24 @@ function Header() {
                         <a href="/discuss">Discuss</a>
                       </li>
                       <li className="logincss">
-                        <SignIn />
+                        {isLoggedIn ? (
+                            <div>
+                              <button className="Allbutton" id="logoutbutt" onClick={handleLogoutClick}>
+                                Logout
+                              </button>
+                              {showQuizButton && (
+                                  <Link to="/quizApp">
+                                    <button className="Allbutton">
+                                      Quiz
+                                    </button>
+                                  </Link>
+                              )}
+                            </div>
+                        ) : (
+                            <button className="Allbutton" onClick={handleLoginClick}>
+                              Login
+                            </button>
+                        )}
                       </li>
                     </ul>
                   </div>

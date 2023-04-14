@@ -36,9 +36,9 @@ function LogIn() {
                     </button>
                     {showQuizButton && (
                         <Link to="/quizApp">
-                        <button className="Allbutton">
-                            Quiz
-                        </button>
+                            <button className="Allbutton">
+                                Quiz
+                            </button>
                         </Link>
                     )}
                 </div>
