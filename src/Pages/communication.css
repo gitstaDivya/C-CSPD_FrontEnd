@@ -60,3 +60,13 @@ a{
 .communicationHeading{
     font: bolder;
 }
+
+.buttonBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navButton{
+    width: 20%;
+}

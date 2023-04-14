@@ -2,3 +2,7 @@
     position: relative !important;
     height: 10.2vh;
 }
+
+.navbar-nav{
+    width: 100%
+}

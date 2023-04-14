@@ -3,14 +3,18 @@ import './communication.css'
 import SideNavbar from '../component/SideNavbar'
 import Header from '../component/Header'
 import Footer from '../component/Footer'
+import { useHistory } from "react-router-dom";
+
 
 function Communication() {
+
+    const history = useHistory();
   return (
     <React.StrictMode>
         <div className='resources_main'>
             <div className='sideNavBar'>
                 <div className='Headings'>
-                    <h4>COMMUNICAION SKILLS</h4>
+                    <h4>COMMUNICATION SKILLS</h4>
                     <div className='subHeading'>
                         <a href='#introCommunication' className='subHeadingText'>Introduction</a>
                     </div>
@@ -87,6 +91,10 @@ Overall, interpersonal communication skills are essential in both personal and p
 
             </p>
             <br></br>
+            <div className='buttonBox'>
+                    <button onClick={()=> history.push('/softskills')} className='btn btn-warning navButton'>Soft Skills</button>
+                    <button onClick={() =>history.push('/resources')} className='btn btn-warning navButton'>Personality Development</button>
+            </div>
             </div>
             </div>
         </div>

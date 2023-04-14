@@ -3,8 +3,10 @@ import './resources.css'
 import SideNavbar from '../component/SideNavbar'
 import Header from '../component/Header'
 import Footer from '../component/Footer'
+import { useHistory } from "react-router-dom";
 
 function Resources() {
+    const history = useHistory();
   return (
     <React.StrictMode>
         <div className='resources_main'>
@@ -100,6 +102,10 @@ Overall, leadership skills are a critical aspect of personality development. By 
 
                 </p>
                 <br></br>
+                <div className='buttonBox'>
+                    <button onClick={()=> history.push('/softskills')} className='btn btn-warning navButton'>Soft Skills</button>
+                    <button onClick={() =>history.push('/communication')} className='btn btn-warning navButton'>Communication Skills</button>
+                </div>
                 </div>
             </div>
         </div>

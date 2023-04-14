@@ -52,6 +52,9 @@ function Header() {
                         <a href="/#resources">Resources</a>
                       </li>
                       <li>
+                        <a href="/pastevents">Past Events</a>
+                      </li>
+                      <li>
                         <a href="/#contact">Contact</a>
                       </li>
                       <li>

@@ -3,8 +3,11 @@ import './softskills.css'
 import SideNavbar from '../component/SideNavbar'
 import Header from '../component/Header'
 import Footer from '../component/Footer'
+import { useHistory } from "react-router-dom";
+
 
 function SoftSkills() {
+    const history = useHistory();
     return (
         <React.StrictMode>
             <div className='resources_main'>
@@ -140,6 +143,10 @@ function SoftSkills() {
 
                         </p>
                         <br></br>
+                        <div className='buttonBox'>
+                            <button onClick={()=> history.push('/resources')} className='btn btn-warning navButton'>Personality Development</button>
+                            <button onClick={() =>history.push('/communication')} className='btn btn-warning navButton'>Communication Skills</button>
+                        </div>
                     </div>
 
                 </div>
