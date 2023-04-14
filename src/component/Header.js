@@ -21,7 +21,7 @@ function Header() {
     setIsLoggedIn(false);
     setShowQuizButton(false);
     localStorage.clear();
-    window.location.reload();
+    window.location.href = "/";
   };
 
   useEffect(() => {
