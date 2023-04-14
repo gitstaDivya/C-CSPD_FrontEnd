@@ -16,6 +16,7 @@ import Home from "./Pages/Home";
 import Resources from "./Pages/Resources";
 import SoftSkills from "./Pages/softskills";
 import Communication from "./Pages/communication";
+import discuss from "./Pages/discuss";
 
 function App() {
   return (
@@ -28,9 +29,10 @@ function App() {
             <Route exact path="/resources" component={Resources} />
             <Route exact path="/softskills" component={SoftSkills} />
             <Route exact path= "/communication" component={Communication} />
+            <Route exact path="/discuss" component={discuss} />
           </Switch>
         </ScrollToTop>
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </React.StrictMode>
   );

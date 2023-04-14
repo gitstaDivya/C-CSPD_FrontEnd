@@ -15,7 +15,7 @@ function Communication() {
                         <a href='#introCommunication' className='subHeadingText'>Introduction</a>
                     </div>
                     <div className='subHeading'>
-                        <a href='#verbalCommunicaton' className='subHeadingText'>Verbal Communication Skills</a>
+                        <a href='#verbalCommunication' className='subHeadingText'>Verbal Communication Skills</a>
                     </div>
                     <div className='subHeading'>
                         <a href='#writtenCommunication' className='subHeadingText'>Written Communication Skills</a>

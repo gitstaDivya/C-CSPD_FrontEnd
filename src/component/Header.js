@@ -1,5 +1,6 @@
 import React from "react";
 import SignIn from "./googleSignIn/signIn";
+import "./header.css"
 
 function Header() {
   return (
@@ -52,6 +53,9 @@ function Header() {
                       </li>
                       <li>
                         <a href="/#contact">Contact</a>
+                      </li>
+                      <li>
+                        <a href="/discuss">Discuss</a>
                       </li>
                       <li className="logincss">
                         <SignIn />
