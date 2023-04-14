@@ -1,0 +1,43 @@
+.card{
+    width: 50vw;
+    /* border: 1px dotted rgba(0, 0, 0, 0.436); */
+    padding: 20px;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.titleClass{
+    text-align: left;
+    font-size: 16px;
+}
+
+.typingArea{
+    margin-top: 5px;
+    text-align: left;
+    font-family: "Roboto Slab", serif !important;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.755);
+    resize: none;
+}
+
+.btn-primary{
+    width: 200px;
+    margin: 10px;
+    margin-left: 0;
+}
+
+.discussionTrack{
+    height: 50vw;
+    /* background-color: rgba(0, 0, 0, 0.061); */
+    width: 80vw;
+    margin-left: 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.panel{
+    width: 80%;
+    margin-top: 20px;
+}
