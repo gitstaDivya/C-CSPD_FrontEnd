@@ -18,6 +18,7 @@ import SoftSkills from "./Pages/softskills";
 import Communication from "./Pages/communication";
 import PastEvents from "./Pages/PastEvents";
 import discuss from "./Pages/discuss";
+import QApp from "./QApp";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route exact path= "/communication" component={Communication} />
             <Route exact path= "/pastevents" component={PastEvents} />
             <Route exact path="/discuss" component={discuss} />
+            <Route exact path="/quizApp" component={QApp} />
           </Switch>
         </ScrollToTop>
         {/* <Footer /> */}

@@ -161,7 +161,7 @@
 			prevEasing : 'swing',
 			prevMethod : 'changeOut',
 
-			// Enable default helpers
+			// Enable default helperQuiz
 			helpers : {
 				overlay : true,
 				title   : true
@@ -829,7 +829,7 @@
 			coming.group  = F.group;
 			coming.index  = index;
 
-			// Give a chance for callback or helpers to update coming item (type, title, etc)
+			// Give a chance for callback or helperQuiz to update coming item (type, title, etc)
 			F.coming = coming;
 
 			if (false === F.trigger('beforeLoad')) {
@@ -1125,7 +1125,7 @@
 				current.inner.append( content );
 			}
 
-			// Give a chance for helpers or callbacks to update elements
+			// Give a chance for helperQuiz or callbacks to update elements
 			F.trigger('beforeShow');
 
 			// Set scrolling before calculating dimensions
