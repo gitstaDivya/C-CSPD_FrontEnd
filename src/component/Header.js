@@ -65,7 +65,7 @@ function Header() {
                     className="collapse navbar-collapse"
                     id="bs-example-navbar-collapse-1"
                   >
-                    <ul className="nav navbar-nav">
+                    <ul className="nav navbar-nav" style={{ display: "flex", alignItems: "center" }}>
                       <li>
                         <a href="/#home" className="active">
                           Home
@@ -81,7 +81,7 @@ function Header() {
                         <a href="/#resources">Resources</a>
                       </li>
                       <li>
-                        <a href="/pastevents">Past Events</a>
+                        <a href="/pastevents">Past&nbsp;Events</a>
                       </li>
                       <li>
                         <a href="/#contact">Contact</a>
@@ -89,26 +89,26 @@ function Header() {
                       <li>
                         <a href="/discuss">Discuss</a>
                       </li>
-                      <li className="logincss">
+                      <div className="logincss" style={{ display: "flex", alignItems: "center" }}>
                         {isLoggedIn ? (
-                            <div>
+                            <li>
                               <button className="Allbutton" id="logoutbutt" onClick={handleLogoutClick}>
                                 Logout
                               </button>
                               {showQuizButton && (
-                                  <Link to="/quizApp">
-                                    <button className="Allbutton">
-                                      Quiz
-                                    </button>
-                                  </Link>
-                              )}
-                            </div>
+                                <Link to="/quizApp">
+                                  <button className="Allbutton">
+                                    Quiz
+                                  </button>
+                                </Link>
+                            )}
+                            </li>
                         ) : (
-                            <button className="Allbutton" onClick={handleLoginClick}>
+                            <button className="Allbutton" style={{marginLeft:"15px"}} onClick={handleLoginClick}>
                               Login
                             </button>
                         )}
-                      </li>
+                      </div>
                     </ul>
                   </div>
                 </div>
