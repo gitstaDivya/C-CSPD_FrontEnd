@@ -5,6 +5,8 @@
     /* position: absolute; */
     position: absolute;
     width: 100vw;
+    height: 89.2vh;
+    overflow: auto;
 }
 
 .body{

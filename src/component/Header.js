@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { auth, provider } from "./googleSignIn/config";
 import { signInWithPopup } from "firebase/auth";
 import { Link } from "react-router-dom";
+import './header.css'
 
 function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -32,11 +33,32 @@ function Header() {
     }
   }, []);
 
+  const [stickyClass, setStickyClass] = useState("relative");
+
+  useEffect(() => {
+    window.addEventListener("scroll", stickNavbar);
+
+    return () => {
+      window.removeEventListener("scroll", stickNavbar);
+    };
+  }, []);
+  const stickNavbar = () => {
+    if (window !== undefined) {
+      let windowHeight = window.scrollY;
+      windowHeight > 500
+        ? setStickyClass("stickyclass")
+        : setStickyClass("relative");
+    }
+  };
+
   return (
     <React.StrictMode>
       <div className="menubar">
         <div className="menubar-content">
-          <nav className="navbar navbar-default navbar-fixed-top" id="headerFile">
+          <nav
+            className={`navbar navbar-default navbar-fixed-top ${stickyClass}`}
+            id="headerFile"
+          >
             <div className="container">
               <div className="row">
                 <div className="col-md-3 col-sm-3">
@@ -65,7 +87,10 @@ function Header() {
                     className="collapse navbar-collapse"
                     id="bs-example-navbar-collapse-1"
                   >
-                    <ul className="nav navbar-nav" style={{ display: "flex", alignItems: "center" }}>
+                    <ul
+                      className="nav navbar-nav"
+                      style={{ display: "flex", alignItems: "center" }}
+                    >
                       <li>
                         <a href="/" className="active">
                           Home
@@ -89,24 +114,33 @@ function Header() {
                       <li>
                         <a href="/discuss">Discuss</a>
                       </li>
-                      <div className="logincss" style={{ display: "flex", alignItems: "center" }}>
+                      <div
+                        className="logincss"
+                        style={{ display: "flex", alignItems: "center" }}
+                      >
                         {isLoggedIn ? (
-                            <li>
-                              <button className="Allbutton" id="logoutbutt" onClick={handleLogoutClick}>
-                                Logout
-                              </button>
-                              {showQuizButton && (
-                                <Link to="/quizApp">
-                                  <button className="Allbutton">
-                                    Quiz
-                                  </button>
-                                </Link>
-                            )}
-                            </li>
-                        ) : (
-                            <button className="Allbutton" style={{marginLeft:"15px"}} onClick={handleLoginClick}>
-                              Login
+                          <li>
+                            <button
+                              className="Allbutton"
+                              id="logoutbutt"
+                              onClick={handleLogoutClick}
+                            >
+                              Logout
                             </button>
+                            {showQuizButton && (
+                              <Link to="/quizApp">
+                                <button className="Allbutton">Quiz</button>
+                              </Link>
+                            )}
+                          </li>
+                        ) : (
+                          <button
+                            className="Allbutton"
+                            style={{ marginLeft: "15px" }}
+                            onClick={handleLoginClick}
+                          >
+                            Login
+                          </button>
                         )}
                       </div>
                     </ul>
@@ -121,4 +155,3 @@ function Header() {
   );
 }
 export default Header;
-
