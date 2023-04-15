@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './communication.css'
 import SideNavbar from '../component/SideNavbar'
 import Header from '../component/Header'
@@ -9,6 +9,75 @@ import { useHistory } from "react-router-dom";
 function Communication() {
 
     const history = useHistory();
+    const [showResults, setShowResults] = useState(false);
+    const [currentQuestion, setCurrentQuestion] = useState(0);
+    const [score, setScore] = useState(0);
+    const questions = [
+        {
+          text: "Which of the following is an example of effective communication?",
+          options: [
+            { id: 0, text: "Asking clarifying questions", isCorrect: true },
+            { id: 1, text: "Using technical jargon", isCorrect: false },
+            { id: 2, text: "Speaking in a monotone voice", isCorrect: false },
+            { id: 3, text: "Interrupting the other person", isCorrect: false },
+          ],
+        },
+        {
+          text: "Which of the following is an example of nonverbal communication?",
+          options: [
+            { id: 0, text: "Facial expressions", isCorrect: true },
+            { id: 1, text: "Written emails", isCorrect: false },
+            { id: 2, text: "Phone calls", isCorrect: false },
+            { id: 3, text: "Video conferences", isCorrect: false },
+          ],
+        },
+        {
+          text: "Which of the following is an example of active listening?",
+          options: [
+            { id: 0, text: "Paying attention to the speaker's words and body language", isCorrect: true },
+            { id: 1, text: "Interrupting the speaker to share your own thoughts", isCorrect: false },
+            { id: 2, text: "Focusing only on what you want to hear", isCorrect: false },
+            { id: 3, text: "Texting or checking email while the speaker is talking", isCorrect: false },
+          ],
+        },
+        {
+          text: "Which of the following is an example of effective feedback?",
+          options: [
+            { id: 0, text: "Criticizing someone's character rather than their behavior", isCorrect: false },
+            { id: 1, text: "Giving specific, actionable feedback focused on behavior", isCorrect: true },
+            { id: 2, text: "Providing vague or general feedback", isCorrect: false },
+            { id: 3, text: "Withholding feedback altogether", isCorrect: false },
+          ],
+        },
+        {
+          text: "Which of the following is an example of cultural sensitivity in communication?",
+          options: [
+            { id: 0, text: "Assuming everyone understands and shares the same cultural norms", isCorrect: false },
+            { id: 1, text: "Taking the time to learn about and respect cultural differences", isCorrect: true },
+            { id: 2, text: "Ignoring cultural differences altogether", isCorrect: true },
+            { id: 3, text: "Using sarcasm or humor that may be offensive to some cultures", isCorrect: false },
+          ],
+        },
+      ];
+      const optionClicked = (isCorrect) => {
+        // Increment the score
+        if (isCorrect) {
+          setScore(score + 1);
+        }
+    
+        if (currentQuestion + 1 < questions.length) {
+          setCurrentQuestion(currentQuestion + 1);
+        } else {
+          setShowResults(true);
+        }
+      };
+    
+      /* Resets the game back to default */
+      const restartGame = () => {
+        setScore(0);
+        setCurrentQuestion(0);
+        setShowResults(false);
+      };
   return (
     <React.StrictMode>
         <div className='resources_main'>
@@ -29,6 +98,9 @@ function Communication() {
                     </div>
                     <div className='subHeading'>
                         <a href='#interpersonalCommunication' className='subHeadingText'>Interpersonal Communication Skills</a>
+                    </div>
+                    <div className='subHeading'>
+                        <a href='#quiz' className='subHeadingText'>Exercise</a>
                     </div>
                     
                 </div>
@@ -91,6 +163,51 @@ Overall, interpersonal communication skills are essential in both personal and p
 
             </p>
             <br></br>
+            <div className="quiz" id='quiz'>
+                    {/* 1. Header  */}
+                    <h1>COMMUNICATION SKILLS EXERCISE</h1>
+
+                    {/* 2. Current Score  */}
+                    <h2>Score: {score}</h2>
+
+                    {/* 3. Show results or show the question game  */}
+                    {showResults ? (
+                        /* 4. Final Results */
+                        <div className="final-results">
+                        <h1>Final Results</h1>
+                        <h2>
+                            {score} out of {questions.length} correct - (
+                            {(score / questions.length) * 100}%)
+                        </h2>
+                        <button className='btn btn-warning' onClick={() => restartGame()}>Restart game</button>
+                        </div>
+                    ) : (
+                        /* 5. Question Card  */
+                        <div className="question-card">
+                        {/* Current Question  */}
+                        <h2>
+                            Question: {currentQuestion + 1} out of {questions.length}
+                        </h2>
+                        <h3 className="question-text">{questions[currentQuestion].text}</h3>
+
+                        {/* List of possible answers  */}
+                        <ul>
+                            {questions[currentQuestion].options.map((option) => {
+                            return (
+                                <li
+                                key={option.id}
+                                onClick={() => optionClicked(option.isCorrect)}
+                                >
+                                {option.text}
+                                </li>
+                            );
+                            })}
+                        </ul>
+                        </div>
+                    )}
+                    </div>
+                    <br></br>
+                    <br></br>
             <div className='buttonBox'>
                     <button onClick={()=> history.push('/softskills')} className='btn btn-warning navButton'>Soft Skills</button>
                     <button onClick={() =>history.push('/resources')} className='btn btn-warning navButton'>Personality Development</button>

@@ -24,6 +24,8 @@ const startMarquee = () =>{
 const Home = () => {
   
   const history = useHistory();
+  console.log(document.getElementById('headerFile'))
+  
   // const navigate = useNavigate();
   return (
     <React.StrictMode>
@@ -359,8 +361,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
       <Footer />
+      </div>
     </React.StrictMode>
   );
 };

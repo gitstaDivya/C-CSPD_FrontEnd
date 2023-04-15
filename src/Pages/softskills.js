@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './softskills.css'
 import SideNavbar from '../component/SideNavbar'
 import Header from '../component/Header'
@@ -8,6 +8,76 @@ import { useHistory } from "react-router-dom";
 
 function SoftSkills() {
     const history = useHistory();
+    const [showResults, setShowResults] = useState(false);
+    const [currentQuestion, setCurrentQuestion] = useState(0);
+    const [score, setScore] = useState(0);
+    
+    const questions = [
+        {
+            text: "Which of the following is an example of a soft skill? ",
+            options: [
+              { id: 0, text: "Data analysis", isCorrect: false },
+              { id: 1, text: "Project management", isCorrect: false },
+              { id: 2, text: "Data analysis", isCorrect: false },
+              { id: 3, text: "Communication", isCorrect: true },
+          ],
+        },
+        {
+          text: "Which of the following is an example of effective communication?",
+          options: [
+            { id: 0, text: "Asking clarifying questions", isCorrect: true },
+            { id: 1, text: "Using technical jargon", isCorrect: false },
+            { id: 2, text: "Speaking in a monotone voice", isCorrect: false },
+            { id: 3, text: "Interrupting the other person", isCorrect: false },
+          ],
+        },
+        {
+          text: "Which of the following is an example of teamwork?",
+          options: [
+            { id: 0, text: "Collaborating with others to achieve a common goal", isCorrect: true },
+            { id: 1, text: "Working alone on a project", isCorrect: false },
+            { id: 2, text: "Criticizing other team members", isCorrect: false },
+            { id: 3, text: "Taking credit for the team's work", isCorrect: false },
+          ],
+        },
+        {
+          text: "Which of the following is an example of emotional intelligence?",
+          options: [
+            { id: 0, text: "Being stubborn and inflexible", isCorrect: false },
+            { id: 1, text: "Showing empathy towards others", isCorrect: true },
+            { id: 2, text: "Avoiding conflict at all costs", isCorrect: false },
+            { id: 3, text: "Refusing to listen to other people's opinions", isCorrect: false },
+          ],
+        },
+        {
+          text: "Which of the following is an example of time management?",
+          options: [
+            { id: 0, text: "Procrastinating until the last minute", isCorrect: false },
+            { id: 1, text: "Making a to-do list and prioritizing tasks", isCorrect: true },
+            { id: 2, text: "Working on multiple tasks at the same time", isCorrect: false },
+            { id: 3, text: "Ignoring deadlines and due dates", isCorrect: false },
+          ],
+        },
+      ];
+      const optionClicked = (isCorrect) => {
+        // Increment the score
+        if (isCorrect) {
+          setScore(score + 1);
+        }
+    
+        if (currentQuestion + 1 < questions.length) {
+          setCurrentQuestion(currentQuestion + 1);
+        } else {
+          setShowResults(true);
+        }
+      };
+    
+      /* Resets the game back to default */
+      const restartGame = () => {
+        setScore(0);
+        setCurrentQuestion(0);
+        setShowResults(false);
+      };
     return (
         <React.StrictMode>
             <div className='resources_main'>
@@ -30,6 +100,9 @@ function SoftSkills() {
                     </div>
                     <div className='subHeading'>
                         <a href='#presentationsoft' className='subHeadingText'>Presentation Skills</a>
+                    </div>
+                    <div className='subHeading'>
+                        <a href='#quiz' className='subHeadingText'>Exercise</a>
                     </div>
                 </div>
 
@@ -143,6 +216,51 @@ function SoftSkills() {
 
                         </p>
                         <br></br>
+                        <div className="quiz" id='quiz'>
+                    {/* 1. Header  */}
+                    <h1>SOFT SKILLS EXERCISE</h1>
+
+                    {/* 2. Current Score  */}
+                    <h2>Score: {score}</h2>
+
+                    {/* 3. Show results or show the question game  */}
+                    {showResults ? (
+                        /* 4. Final Results */
+                        <div className="final-results">
+                        <h1>Final Results</h1>
+                        <h2>
+                            {score} out of {questions.length} correct - (
+                            {(score / questions.length) * 100}%)
+                        </h2>
+                        <button className='btn btn-warning' onClick={() => restartGame()}>Restart game</button>
+                        </div>
+                    ) : (
+                        /* 5. Question Card  */
+                        <div className="question-card">
+                        {/* Current Question  */}
+                        <h2>
+                            Question: {currentQuestion + 1} out of {questions.length}
+                        </h2>
+                        <h3 className="question-text">{questions[currentQuestion].text}</h3>
+
+                        {/* List of possible answers  */}
+                        <ul>
+                            {questions[currentQuestion].options.map((option) => {
+                            return (
+                                <li
+                                key={option.id}
+                                onClick={() => optionClicked(option.isCorrect)}
+                                >
+                                {option.text}
+                                </li>
+                            );
+                            })}
+                        </ul>
+                        </div>
+                    )}
+                    </div>
+                    <br></br>
+                    <br></br>
                         <div className='buttonBox'>
                             <button onClick={()=> history.push('/resources')} className='btn btn-warning navButton'>Personality Development</button>
                             <button onClick={() =>history.push('/communication')} className='btn btn-warning navButton'>Communication Skills</button>

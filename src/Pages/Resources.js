@@ -1,12 +1,87 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './resources.css'
 import SideNavbar from '../component/SideNavbar'
 import Header from '../component/Header'
 import Footer from '../component/Footer'
 import { useHistory } from "react-router-dom";
 
+
 function Resources() {
     const history = useHistory();
+    const [showResults, setShowResults] = useState(false);
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [score, setScore] = useState(0);
+
+  const questions = [
+    {
+      text: "Which of the following is an important trait for personality development?",
+      options: [
+        { id: 0, text: "Apathy", isCorrect: false },
+        { id: 1, text: "Arrogance", isCorrect: false },
+        { id: 2, text: "Introversion", isCorrect: false },
+        { id: 3, text: "Humility", isCorrect: true },
+      ],
+    },
+    {
+      text: "Which of the following is an example of positive self-talk?",
+      options: [
+        { id: 0, text: "I'm going to give it my best shot", isCorrect: true },
+        { id: 1, text: "I'm not good enough for this", isCorrect: false },
+        { id: 2, text: "I can't do this, it's too hard", isCorrect: false },
+        { id: 3, text: "I'll never be successful", isCorrect: false },
+      ],
+    },
+    {
+      text: "Who was the second president of the US?",
+      options: [
+        { id: 0, text: "John Adams", isCorrect: true },
+        { id: 1, text: "Paul Revere", isCorrect: false },
+        { id: 2, text: "Thomas Jefferson", isCorrect: false },
+        { id: 3, text: "Benjamin Franklin", isCorrect: false },
+      ],
+    },
+    {
+      text: "Which of the following is an example of a growth mindset?",
+      options: [
+        { id: 0, text: "Believing that intelligence is fixed and cannot be improved", isCorrect: false },
+        { id: 1, text: "Believing that failure is a reflection of personal worth", isCorrect: true },
+        { id: 2, text: "Believing that challenges are opportunities for growth and learning", isCorrect: false },
+        { id: 3, text: "Believing that success is based solely on luck", isCorrect: false },
+      ],
+    },
+    {
+      text: "Which of the following is an example of assertiveness?",
+      options: [
+        { id: 0, text: "Allowing others to take advantage of you", isCorrect: false },
+        { id: 1, text: "Being overly aggressive and confrontational", isCorrect: true },
+        { id: 2, text: "Standing up for yourself in a respectful and confident manner", isCorrect: true },
+        { id: 3, text: "Avoiding conflict at all costs", isCorrect: false },
+      ],
+    },
+  ];
+
+  // Helper Functions
+
+  /* A possible answer was clicked */
+  const optionClicked = (isCorrect) => {
+    // Increment the score
+    if (isCorrect) {
+      setScore(score + 1);
+    }
+
+    if (currentQuestion + 1 < questions.length) {
+      setCurrentQuestion(currentQuestion + 1);
+    } else {
+      setShowResults(true);
+    }
+  };
+
+  /* Resets the game back to default */
+  const restartGame = () => {
+    setScore(0);
+    setCurrentQuestion(0);
+    setShowResults(false);
+  };
   return (
     <React.StrictMode>
         <div className='resources_main'>
@@ -31,6 +106,9 @@ function Resources() {
                     </div>
                     <div className='subHeading'>
                         <a href='#leadershippersonality' className='subHeadingText'>Leadership Skills</a>
+                    </div>
+                    <div className='subHeading'>
+                        <a href='#quiz' className='subHeadingText'>Exercise</a>
                     </div>
                 </div>
             </div>
@@ -102,6 +180,51 @@ Overall, leadership skills are a critical aspect of personality development. By 
 
                 </p>
                 <br></br>
+                <div className="quiz" id='quiz'>
+                    {/* 1. Header  */}
+                    <h1>PERSONALITY DEVELOPMENT EXERCISE</h1>
+
+                    {/* 2. Current Score  */}
+                    <h2>Score: {score}</h2>
+
+                    {/* 3. Show results or show the question game  */}
+                    {showResults ? (
+                        /* 4. Final Results */
+                        <div className="final-results">
+                        <h1>Final Results</h1>
+                        <h2>
+                            {score} out of {questions.length} correct - (
+                            {(score / questions.length) * 100}%)
+                        </h2>
+                        <button className='btn btn-warning' onClick={() => restartGame()}>Restart game</button>
+                        </div>
+                    ) : (
+                        /* 5. Question Card  */
+                        <div className="question-card">
+                        {/* Current Question  */}
+                        <h2>
+                            Question: {currentQuestion + 1} out of {questions.length}
+                        </h2>
+                        <h3 className="question-text">{questions[currentQuestion].text}</h3>
+
+                        {/* List of possible answers  */}
+                        <ul>
+                            {questions[currentQuestion].options.map((option) => {
+                            return (
+                                <li
+                                key={option.id}
+                                onClick={() => optionClicked(option.isCorrect)}
+                                >
+                                {option.text}
+                                </li>
+                            );
+                            })}
+                        </ul>
+                        </div>
+                    )}
+                    </div>
+                    <br></br>
+                    <br></br>
                 <div className='buttonBox'>
                     <button onClick={()=> history.push('/softskills')} className='btn btn-warning navButton'>Soft Skills</button>
                     <button onClick={() =>history.push('/communication')} className='btn btn-warning navButton'>Communication Skills</button>
